@@ -1,94 +1,211 @@
-*{ margin : 0; 
-padding : 0;
-box-sizing : border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html, body{
-     font-family: "Inter", sans-serif; 
-     font-weight: 400;
-    }
+html, body {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  background-color: #d0d4d5;
+}
 
-    .main{ 
-        height: 100vh; 
-        width: 100%; 
-        background-color: #d0d4d5; 
-    }
+.main {
+  min-height: 100vh;
+  width: 100%;
+}
 
-    .nav{
-         height: 110px; 
-         width: 100%; 
-         display: flex; 
-         align-items: center; 
-         justify-content: space-between; 
-         padding: 0 50px; 
-        }
+/* NAVBAR */
+.nav {
+  height: 110px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+}
 
-        .nav-part-1{
-             display: flex; 
-             align-items: center;
-              justify-content: center; 
-            }
-            .nav img{ 
-                height: 80px; 
-                width: auto; 
-                margin-right: 60px;
-                 cursor: pointer; 
-                }
+.nav-part-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-                .nav-part-1 ul{ 
-                    display: flex; 
-                    align-items: center; 
-                    justify-content: center; 
-                    list-style: none; 
-                }
+.nav img {
+  height: 80px;
+  width: auto;
+  margin-right: 60px;
+  cursor: pointer;
+}
 
-                .nav-part-1 ul li{ 
-                    margin-right: 40px; 
-                    font-size: 19px; 
-                    font-weight: 500; 
-                    text-transform: uppercase; 
-                    cursor: pointer; 
-                }
+.nav-part-1 ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
 
-                .nav-part-2 i{
-                     margin-right: 40px; 
-                     font-size: 21px; 
-                     font-weight: 500; 
-                     cursor: pointer; 
-                    }
+.nav-part-1 ul li {
+  margin-right: 40px;
+  font-size: 19px;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
 
-                    .content{ 
-                        height: calc(100vh - 110px); 
-                        width: 100%; 
-                        position: relative; 
-                        display: flex; 
-                    }
+.nav-part-1 ul li:hover {
+  color: #ff3c00; /* Nike orange/red vibe */
+}
 
-                    .content-left{ 
-                        height: 100%; 
-                        width: 40%;
-                        padding: 80px 100px; 
-                    }
+.nav-part-2 i {
+  margin-right: 40px;
+  font-size: 21px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
 
-                    .content-left h5{
-                         font-size: 20px; 
-                         text-transform: capitalize; 
-                         color: #555; 
-                         margin-bottom: 10px;
-                         }
+.nav-part-2 i:hover {
+  transform: scale(1.2);
+}
 
-                         .content-left h1{ 
-                            font-size: 55px; 
-                            text-transform: capitalize;
-                             color: #000;
-                              margin-bottom: 25px; 
-                            }
+/* CONTENT */
+.content {
+  min-height: calc(100vh - 110px);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
-                            .content-left p{ 
-                                font-size: 18px; 
-                                color: #333; 
-                                line-height: 1.6; 
-                                margin-bottom: 35px; 
-                            }
+.content-left {
+  width: 40%;
+  padding: 80px 100px;
+}
 
+.content-left h5 {
+  font-size: 20px;
+  text-transform: capitalize;
+  color: #555;
+  margin-bottom: 10px;
+}
 
+.content-left h1 {
+  font-size: 55px;
+  text-transform: capitalize;
+  color: #000;
+  margin-bottom: 25px;
+  line-height: 1.1;
+}
+
+.content-left p {
+  font-size: 18px;
+  color: #000;
+  width: 80%;
+  margin-bottom: 30px;
+}
+
+.btn {
+  background-color: #000;
+  color: #fff;
+  font-size: 15px;
+  padding: 12px 40px;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  border-top-left-radius: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #ff3c00;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* RIGHT SIDE PRODUCT */
+.content-right {
+  width: 60%;
+  padding: 110px 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product {
+  height: 500px;
+  width: 300px;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  overflow: hidden;
+  display: inline-block;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 15px;
+  text-align: center;
+  margin-right: 20px;
+  box-shadow: 0 5px 15px rgba(17, 0, 17, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.product:hover {
+  transform: translateY(-10px);
+}
+
+.product img {
+  height: 200px;
+  width: 100%;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.product h4 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  text-transform: capitalize;
+}
+
+.product .category {
+  font-size: 14px;
+  font-weight: 500;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.product .color {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.product .price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+  margin-top: auto; /* pushes price toward bottom */
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .content-left, .content-right {
+    width: 100%;
+    padding: 40px;
+  }
+
+  .content-left p {
+    width: 100%;
+  }
+
+  .product {
+    width: 90%;
+    height: auto;
+  }
+}
